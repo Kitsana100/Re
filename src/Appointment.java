@@ -32,6 +32,11 @@ class Appoinment {
 	        Thread.sleep(4000);
 	        driver.findElement(By.xpath("//*[@id=\"btn-book-appointment\"]")).click();
 	        
+	      //Add Valiabate and Assert
+	        String result = driver.findElement(By.id("comment")).getText();
+
+	        assertEquals("Test",result);
+	        
 	        Thread.sleep(4000);
 	         driver.quit();
 	         driver = null;
